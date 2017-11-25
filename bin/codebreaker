@@ -9,3 +9,6 @@ game.start(secret_number)
 while (guess = gets.chomp)
   game.guess(guess)
 end
+# output.minus("-")
+# number_match("-")
+#   secret_number.output.split(minus)
