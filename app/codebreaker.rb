@@ -29,8 +29,7 @@ class Codebreaker
         end
 
         # DONT forget outputs before puts
-
-       def input_answer(input)
+        def input_answer(input)
           output.puts "Try guessing a number with four digits" if input.length != 4
           input_answer = ''
               # elsif input == ''
@@ -39,7 +38,7 @@ class Codebreaker
         end
 
         def exact_match
-          @secret_number.split('')
+          @secret_number.split(//)
         end
 # - + each number test
 # should output - , + with each line/number
@@ -48,7 +47,7 @@ class Codebreaker
           input_answer=[]
           #output.replace('-')
           #  input.split('').each do |s| s.split('')
-          input.split('').each_with_index do |number, index|
+          input.split(//).each_with_index do |number, index|
 
           # if input.split('') == n.split('')
             #   puts.output.split('').replace('+')
@@ -60,7 +59,6 @@ class Codebreaker
               # input_answer.replace('+')
               # input_answer.split(//).replace<<('+')
               input_answer << '+'
-              exact_match[index]
 
             elsif exact_match.include?(number)
               # input_answer.replace('+')
@@ -69,7 +67,7 @@ class Codebreaker
             end
           end
           # input_answer.maps
-          input_answer.sort.join('')
+          input_answer.sort.join
         end
 
       end
