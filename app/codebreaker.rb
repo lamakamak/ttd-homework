@@ -38,14 +38,16 @@ class Codebreaker
              all_matches(input)
         end
 
+        def secret_numbers
+          @secret_number.split('')
+        end
 # - + each number test
 # should output - , + with each line/number
         def all_matches(input)
           # @secret_number_arr.each_line do |number| puts if input.split(//)number != input
-          #output.replace('-')
           input_answer=[]
-          change_each = secret_numbers
-          #  input = gets.chomp
+          #output.replace('-')
+        
           #  input.split('').each do |s| s.split('')
           input.split('').each_with_index do |number, index|
 
@@ -59,9 +61,9 @@ class Codebreaker
               # input_answer.replace('+')
               # input_answer.split(//).replace<<('+')
               input_answer << '+'
-              change_each[index]
+              secret_numbers[index]
 
-            elsif change_each.include?(number)
+            elsif secret_numbers.include?(number)
               # input_answer.replace('+')
               input_answer << '-'
          # input_answer.sort.join('')
@@ -71,8 +73,5 @@ class Codebreaker
           input_answer.sort.join('')
         end
 
-        def secret_numbers
-          @secret_number.split('')
-        end
       end
     end
